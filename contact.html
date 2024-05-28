@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="email.js" defer></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <div class="contact-form">
+            <!-- Ensure there is no action attribute on the form -->
+            <form onsubmit="sendEmail(event)">
+                <label for="sendername">Name</label>
+                <input type="text" id="sendername" name="sendername" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="to" name="to" required>
+                
+                <!-- <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required> -->
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <!-- <label for="replyto">Reply To</label>
+                <input type="email" id="replyto" name="replyto" required> -->
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: bushrazahra0202@gmail.com</p>
+            <p>Phone: 03010888816</p>
+        </div>
+    </div>
+</body>
+</html>
